@@ -35,16 +35,15 @@ def getPlay( human, plays ):
 	return 
 
 def checkWinner( play, plays, humanCount, computerCount ):
-	#create a variable called result and have it equal play at index 0 minus play at index 1
-	#using an if-statement, check if the variable result is in humanWins
-		#increment humanCount by 1
-		#print off a message that says "Human won with" followed by their plays "beating" followed by the plays of the computer. This uses Collections that is being passed to the function. Play around with play and plays variable and see what values are inside each
-	#else
-		#increment computerCount by 1
-		#print off a message that says "Computer won with" followed by their plays "beating" followed by the plays of the computer. This uses Collections that is being passed to the function. Play around with play and plays variable and see what values are inside each
+        result = play[0]-play[1]
+        if result in humanWins:
+                humanCount += 1
+                print("Human won with",plays(humanPlay),"beating",plays(computerPlay)
+        else:
+                computerCount += 1
+                print("Computer won with",plays(computerPlay),"beating",plays(humanPlay)
 
-	#return humanCount and computerCount
-	return 0 #remove this line when you start coding
+	return 
 
 
 ### Beginning of Main
