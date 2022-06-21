@@ -5,6 +5,7 @@ humanWins = [-2, 1]
 humanCount = 0
 computerCount = 0
 humanChoice = False
+playContinue = True
 
 
 def getValidHumanPlay( low, high ):
@@ -21,21 +22,17 @@ def getValidHumanPlay( low, high ):
 
 def getPlay( human, plays ):
         
-
-
-
-
+        while playContinue == True:
+                humanPlay = getValidHumanPlay(0,2)
+                computerPlay = random.randint(0,2)
+                print("Human chose ",humanPlay)
+                print("Computer chose ",computerPlay)
+                if humanPlay == computerPlay:
+                        PlayContinue = True
+                else:
+                        playContinue = False
         
-	#create a Boolean variable that checks whether to keep checking for plays or not
-	#using a while loop, if the boolean variable you create one step above is true do the following:
-		#create a variable called humanPlay call getValidHumanPlay, sending 0 and 2 as the low and high values, store in a variable
-		#create a variable aclled computerPlay and use random.randint with values of 0 and 2
-		#print "Human chose " and then the humanPlay variable
-		#print "Computer chose " and then the computerPlay
-		#using the boolean variable you created above, check if humanPlay is equal to computerplay. This is to check whether there is a tie or not.
-
-	#return humanPlay and computerPlay
-	return 0 #remove this line when you start coding
+	return 
 
 def checkWinner( play, plays, humanCount, computerCount ):
 	#create a variable called result and have it equal play at index 0 minus play at index 1
